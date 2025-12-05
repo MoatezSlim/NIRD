@@ -3,73 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🏘️ Village Numérique Résistant - NIRD</title>
+    <title>🏘️ Village Numérique Résistant - NIRD 2025</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <meta name="description" content="Quiz NIRD - teste ta résistance numérique et découvre des solutions libres pour libérer ton école des Big Tech.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="Village Numérique Résistant - Quiz NIRD, solutions libres, jeu interactif, et communauté pour transformer ton école.">
 </head>
 <body>
-    <!-- Header -->
-    <header class="hero">
+    <!-- Navigation Header -->
+    <header class="navbar">
         <div class="container">
-            <h1>🏘️ Le Village Numérique Résistant</h1>
-            <p class="subtitle">David contre Goliath 🗡️ – Astérix contre l’Empire numérique</p>
-            <div class="hero-buttons">
-                <button id="startQuizBtn" class="cta-btn">
-                    🎮 Teste ta Résistance →
-                </button>
-                <a href="#solutions" class="secondary-btn">💡 Voir les solutions libres</a>
+            <div class="nav-brand">
+                <div class="logo">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23667eea' opacity='0.2'/%3E%3Ctext x='50' y='60' font-size='50' font-weight='bold' text-anchor='middle' fill='%23667eea'%3E🏘%3C/text%3E%3C/svg%3E" alt="NIRD Logo" class="logo-img">
+                    <span class="logo-text">Village NIRD</span>
+                </div>
             </div>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active">Accueil</a>
+                <a href="#nird-intro" class="nav-link">À propos</a>
+                <a href="#quiz-section" class="nav-link">Quiz</a>
+                <a href="#game-section" class="nav-link">Jeu</a>
+                <a href="#solutions" class="nav-link">Solutions</a>
+                <a href="#community" class="nav-link">Communauté</a>
+                <a href="#leaderboard" class="nav-link">Classement</a>
+            </nav>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
-    <!-- NIRD Intro -->
-    <section id="nird-intro" class="section">
+    <!-- Hero Section avec animation -->
+    <section id="home" class="hero">
+        <div class="stars"></div>
         <div class="container">
-            <h2>Qu’est-ce que NIRD ?</h2>
-            <div class="pillars">
-                <div class="pillar">
-                    <span class="pillar-icon">✅</span>
-                    <h3>Inclusion</h3>
-                    <p>Assurer un accès numérique pour tous les élèves et familles.</p>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-icon">⚡</span>
+                    <span>Nuit de l'Info 2025</span>
                 </div>
-                <div class="pillar">
-                    <span class="pillar-icon">⚖️</span>
-                    <h3>Responsabilité</h3>
-                    <p>Respecter les données et réduire la dépendance aux Big Tech.</p>
+                <h1 class="hero-title">
+                    <span class="word">Libère</span>
+                    <span class="word">Ton</span>
+                    <span class="word">École</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Construis un village numérique résistant contre l'empire des Big Tech. 
+                    <br><strong>Inclusion • Responsabilité • Durabilité</strong>
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-target="500">0</span>
+                        <span class="stat-label">Écoles impliquées</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="50">0</span>
+                        <span class="stat-label">Solutions libres</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="10000">0</span>
+                        <span class="stat-label">Élèves actifs</span>
+                    </div>
                 </div>
-                <div class="pillar">
-                    <span class="pillar-icon">🌱</span>
-                    <h3>Durabilité</h3>
-                    <p>Lutter contre l’obsolescence programmée et encourager le réemploi.</p>
+                <div class="hero-buttons">
+                    <button id="startQuizBtn" class="btn btn-primary btn-lg">
+                        <i class="fas fa-gamepad"></i> Lancer le défi
+                    </button>
+                    <a href="#solutions" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-lightbulb"></i> Découvrir solutions
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="animated-village">
+                    <div class="village-house house-1">🏘️</div>
+                    <div class="village-house house-2">🏘️</div>
+                    <div class="village-house house-3">🏘️</div>
+                    <div class="village-cloud">☁️</div>
+                    <div class="village-bird">🐦</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Quiz Section : mini-quiz + Google Form -->
+    <!-- NIRD Intro -->
+    <section id="nird-intro" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-badge">✨</span>
+                Qu'est-ce que NIRD ?
+            </h2>
+            <div class="pillars">
+                <div class="pillar pillar-1">
+                    <div class="pillar-icon">✅</div>
+                    <h3>Inclusion</h3>
+                    <p>Assurer un accès numérique égal pour tous les élèves et familles.</p>
+                    <div class="pillar-details">
+                        <ul>
+                            <li>Accessibilité universelle</li>
+                            <li>Pas d'exclusion technologique</li>
+                            <li>Ressources gratuites</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pillar pillar-2">
+                    <div class="pillar-icon">⚖️</div>
+                    <h3>Responsabilité</h3>
+                    <p>Respecter les données et réduire la dépendance aux géants du numérique.</p>
+                    <div class="pillar-details">
+                        <ul>
+                            <li>Souveraineté des données</li>
+                            <li>Réduction de la dépendance</li>
+                            <li>Transparence</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pillar pillar-3">
+                    <div class="pillar-icon">🌱</div>
+                    <h3>Durabilité</h3>
+                    <p>Lutter contre l'obsolescence programmée et encourager le réemploi.</p>
+                    <div class="pillar-details">
+                        <ul>
+                            <li>Réemploi du matériel</li>
+                            <li>Réduction des déchets</li>
+                            <li>Durée de vie prolongée</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section Interactive -->
     <section id="quiz-section" class="section hidden">
         <div class="container">
             <div class="quiz-container">
                 <div class="quiz-header">
-                    <h2 id="quiz-title">Défi Résistance Numérique</h2>
-                    <div class="progress-bar">
-                        <div id="progress-fill" class="progress-fill"></div>
+                    <div class="quiz-header-top">
+                        <button class="btn-back" onclick="closeQuiz()">
+                            <i class="fas fa-arrow-left"></i> Retour
+                        </button>
+                        <div class="quiz-timer">
+                            <i class="fas fa-hourglass-end"></i>
+                            <span id="timer">0:00</span>
+                        </div>
                     </div>
-                    <p class="score">Score : <span id="current-score">0</span>/12</p>
+                    <h2 id="quiz-title">Défi Résistance Numérique</h2>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div id="progress-fill" class="progress-fill"></div>
+                        </div>
+                        <p class="quiz-progress">
+                            <span id="question-number">1</span> / <span id="total-questions">4</span>
+                        </p>
+                    </div>
+                    <div class="quiz-score-display">
+                        <div class="score-box">
+                            <i class="fas fa-star"></i>
+                            <span id="current-score">0</span> / 12 points
+                        </div>
+                        <div class="difficulty-indicator">
+                            <span class="difficulty" id="difficulty">Débutant</span>
+                        </div>
+                    </div>
                 </div>
-                <div id="question-container">
+
+                <div id="question-container" class="question-container">
                     <!-- Questions générées par JS -->
                 </div>
-                <button id="nextBtn" class="next-btn hidden">Question suivante →</button>
 
-                <hr style="margin: 40px 0; border: none; border-top: 1px solid #eee;">
+                <div class="quiz-nav">
+                    <button id="prevBtn" class="btn btn-secondary" onclick="previousQuestion()" style="display:none;">
+                        <i class="fas fa-chevron-left"></i> Précédent
+                    </button>
+                    <button id="nextBtn" class="btn btn-primary hidden">
+                        <i class="fas fa-chevron-right"></i> Suivant
+                    </button>
+                </div>
 
-                <h3 style="text-align:center; margin-bottom:15px;">
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #eee;">
+
+                <h3 style="text-align:center; margin-bottom:15px; font-size:1.3rem;">
                     📋 Quiz officiel NIRD (Google Forms)
                 </h3>
                 <p class="quiz-desc">
-                    Réponds aussi au formulaire officiel pour enregistrer ton score et tes réponses.
+                    Finalise ton score avec le formulaire officiel et reçois ta certification de résistance numérique.
                 </p>
                 <div class="form-container">
                     <iframe
@@ -86,85 +207,385 @@
         </div>
     </section>
 
-    <!-- Solutions Libres -->
-    <section id="solutions" class="section">
+    <!-- Game Section -->
+    <section id="game-section" class="section section-alt">
         <div class="container">
-            <h2>💡 Solutions libres pour ton établissement</h2>
-            <div class="solutions-grid">
-                <div class="solution-card">
-                    <div class="solution-icon">🐧</div>
-                    <h3>Linux Mint</h3>
-                    <p>Remplace Windows 10/11.<br><strong>Gratuit, libre, pas d’obsolescence forcée.</strong></p>
-                    <a href="https://linuxmint.com" target="_blank" class="solution-link">→ Découvrir Linux Mint</a>
+            <h2 class="section-title">
+                <span class="title-badge">🎮</span>
+                Défends ton village numérique
+            </h2>
+            <p class="section-subtitle">Un jeu de défense en temps réel contre l'empire Big Tech.</p>
+
+            <div class="game-wrapper">
+                <!-- Game Canvas -->
+                <div class="game-container">
+                    <canvas id="gameCanvas" width="800" height="600"></canvas>
+                    <div id="gameHUD" class="game-hud">
+                        <div class="hud-item">
+                            <span class="hud-label">🏘️ Village</span>
+                            <span class="hud-value" id="villageHealth">100</span>
+                        </div>
+                        <div class="hud-item">
+                            <span class="hud-label">💡 Solutions</span>
+                            <span class="hud-value" id="solutionCount">0</span>
+                        </div>
+                        <div class="hud-item">
+                            <span class="hud-label">⭐ Score</span>
+                            <span class="hud-value" id="gameScore">0</span>
+                        </div>
+                        <div class="hud-item">
+                            <span class="hud-label">📊 Vague</span>
+                            <span class="hud-value" id="waveCount">1</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="solution-card">
-                    <div class="solution-icon">☁️</div>
-                    <h3>Nextcloud</h3>
-                    <p>Remplace Google Drive.<br><strong>Données souveraines, auto-hébergeable.</strong></p>
-                    <a href="https://nextcloud.com" target="_blank" class="solution-link">→ Voir Nextcloud</a>
+
+                <!-- Game Controls -->
+                <div class="game-controls">
+                    <button id="startGameBtn" class="btn btn-primary btn-lg">
+                        <i class="fas fa-play"></i> Lancer le jeu
+                    </button>
+                    <button id="pauseGameBtn" class="btn btn-secondary btn-lg hidden">
+                        <i class="fas fa-pause"></i> Pause
+                    </button>
+                    <button id="resumeGameBtn" class="btn btn-secondary btn-lg hidden">
+                        <i class="fas fa-play"></i> Reprendre
+                    </button>
+                    <button id="restartGameBtn" class="btn btn-secondary btn-lg hidden">
+                        <i class="fas fa-redo"></i> Recommencer
+                    </button>
                 </div>
-                <div class="solution-card">
-                    <div class="solution-icon">📝</div>
-                    <h3>LibreOffice</h3>
-                    <p>Remplace Microsoft Office.<br><strong>Suite bureautique libre et complète.</strong></p>
-                    <a href="https://www.libreoffice.org" target="_blank" class="solution-link">→ Télécharger LibreOffice</a>
+
+                <!-- Game Info -->
+                <div class="game-info">
+                    <h3>📖 Comment jouer</h3>
+                    <ul>
+                        <li><strong>Clique</strong> sur les ennemis Big Tech pour les détruire</li>
+                        <li>Chaque ennemi détruit = 1 solution libre gagnée</li>
+                        <li>Défends ton village pendant 5 vagues</li>
+                        <li>Si la santé = 0, tu perds</li>
+                        <li>Termine toutes les vagues pour devenir un village résistant !</li>
+                    </ul>
                 </div>
-                <div class="solution-card">
-                    <div class="solution-icon">🎨</div>
-                    <h3>GIMP</h3>
-                    <p>Remplace Photoshop.<br><strong>Éditeur d’images professionnel et libre.</strong></p>
-                    <a href="https://www.gimp.org" target="_blank" class="solution-link">→ Installer GIMP</a>
+
+                <!-- Game Over Modal -->
+                <div id="gameOverModal" class="modal hidden">
+                    <div class="modal-content">
+                        <button class="modal-close" onclick="closeGameOverModal()">&times;</button>
+                        <div class="modal-icon" id="gameOverIcon">💥</div>
+                        <h2 id="gameOverTitle">Village détruit</h2>
+                        <p id="gameOverMessage">Le village a succombé à l'empire numérique.</p>
+                        <div class="game-stats">
+                            <div class="stat-row">
+                                <span>Score final :</span>
+                                <span id="finalScore" class="stat-value">0</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>Solutions acquises :</span>
+                                <span id="finalSolutions" class="stat-value">0</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>Vagues survivies :</span>
+                                <span id="finalWaves" class="stat-value">0</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-lg btn-block" onclick="restartGame()">
+                            <i class="fas fa-redo"></i> Rejouer
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Communauté NIRD -->
-    <section id="community" class="section bg-light">
+    <!-- Solutions Libres avec cartes améliorées -->
+    <section id="solutions" class="section">
         <div class="container">
-            <h2>🤝 Rejoins la communauté NIRD</h2>
-            <p class="community-text">
-                Transforme ton établissement en village numérique résistant.
-            </p>
-            <div class="community-links">
-                <a href="https://nird.forge.apps.education.fr" target="_blank" class="community-btn primary">
-                    🌐 Site officiel NIRD
-                </a>
-                <a href="https://forge.apps.education.fr" target="_blank" class="community-btn secondary">
-                    🔨 Forge des communs numériques éducatifs
-                </a>
+            <h2 class="section-title">
+                <span class="title-badge">💡</span>
+                Solutions libres recommandées
+            </h2>
+            <p class="section-subtitle">Remplace tes outils propriétaires par des alternatives libres et souveraines.</p>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="os">Systèmes</button>
+                <button class="filter-btn" data-filter="office">Bureau</button>
+                <button class="filter-btn" data-filter="cloud">Cloud</button>
+                <button class="filter-btn" data-filter="creative">Créatif</button>
+            </div>
+
+            <div class="solutions-grid">
+                <!-- Linux Mint -->
+                <div class="solution-card solution-card-os" data-filter="os">
+                    <div class="solution-badge">Système d'exploitation</div>
+                    <div class="solution-icon">🐧</div>
+                    <h3>Linux Mint</h3>
+                    <p class="solution-tagline">L'OS libre facile d'accès</p>
+                    <p class="solution-description">Remplace Windows sans compromis. Gratuit, sécurisé, et respecte ta vie privée.</p>
+                    <div class="solution-specs">
+                        <span class="spec"><i class="fas fa-check"></i> Gratuit</span>
+                        <span class="spec"><i class="fas fa-check"></i> Facile</span>
+                        <span class="spec"><i class="fas fa-check"></i> Sûr</span>
+                    </div>
+                    <div class="solution-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">4.8/5 (1200 avis)</span>
+                    </div>
+                    <a href="https://linuxmint.com" target="_blank" class="btn btn-primary btn-block">
+                        <i class="fas fa-download"></i> Télécharger
+                    </a>
+                </div>
+
+                <!-- Nextcloud -->
+                <div class="solution-card solution-card-cloud" data-filter="cloud">
+                    <div class="solution-badge">Stockage cloud</div>
+                    <div class="solution-icon">☁️</div>
+                    <h3>Nextcloud</h3>
+                    <p class="solution-tagline">Tes données, chez toi</p>
+                    <p class="solution-description">Stockage souverain qui remplace Google Drive. Auto-hébergeable en UE.</p>
+                    <div class="solution-specs">
+                        <span class="spec"><i class="fas fa-check"></i> Souverain</span>
+                        <span class="spec"><i class="fas fa-check"></i> Auto-hébergé</span>
+                        <span class="spec"><i class="fas fa-check"></i> Collaboratif</span>
+                    </div>
+                    <div class="solution-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-text">4.6/5 (980 avis)</span>
+                    </div>
+                    <a href="https://nextcloud.com" target="_blank" class="btn btn-primary btn-block">
+                        <i class="fas fa-cloud"></i> Découvrir
+                    </a>
+                </div>
+
+                <!-- LibreOffice -->
+                <div class="solution-card solution-card-office" data-filter="office">
+                    <div class="solution-badge">Suite bureautique</div>
+                    <div class="solution-icon">📝</div>
+                    <h3>LibreOffice</h3>
+                    <p class="solution-tagline">Bureautique libre complète</p>
+                    <p class="solution-description">Suite complète (texte, calc, présentation) compatibles avec Office.</p>
+                    <div class="solution-specs">
+                        <span class="spec"><i class="fas fa-check"></i> Complet</span>
+                        <span class="spec"><i class="fas fa-check"></i> Compatible</span>
+                        <span class="spec"><i class="fas fa-check"></i> Open</span>
+                    </div>
+                    <div class="solution-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">4.7/5 (1500 avis)</span>
+                    </div>
+                    <a href="https://www.libreoffice.org" target="_blank" class="btn btn-primary btn-block">
+                        <i class="fas fa-file-word"></i> Installer
+                    </a>
+                </div>
+
+                <!-- GIMP -->
+                <div class="solution-card solution-card-creative" data-filter="creative">
+                    <div class="solution-badge">Édition d'images</div>
+                    <div class="solution-icon">🎨</div>
+                    <h3>GIMP</h3>
+                    <p class="solution-tagline">Photoshop alternatif</p>
+                    <p class="solution-description">Puissant éditeur d'images libre pour design professionnel.</p>
+                    <div class="solution-specs">
+                        <span class="spec"><i class="fas fa-check"></i> Pro</span>
+                        <span class="spec"><i class="fas fa-check"></i> Gratuit</span>
+                        <span class="spec"><i class="fas fa-check"></i> Puissant</span>
+                    </div>
+                    <div class="solution-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-text">4.5/5 (750 avis)</span>
+                    </div>
+                    <a href="https://www.gimp.org" target="_blank" class="btn btn-primary btn-block">
+                        <i class="fas fa-paintbrush"></i> Utiliser
+                    </a>
+                </div>
+
+                <!-- Krita -->
+                <div class="solution-card solution-card-creative" data-filter="creative">
+                    <div class="solution-badge">Dessin numérique</div>
+                    <div class="solution-icon">🖌️</div>
+                    <h3>Krita</h3>
+                    <p class="solution-tagline">Dessin et peinture libre</p>
+                    <p class="solution-description">Application de dessin/peinture professionnelle et intuitive.</p>
+                    <div class="solution-specs">
+                        <span class="spec"><i class="fas fa-check"></i> Artistique</span>
+                        <span class="spec"><i class="fas fa-check"></i> Intuitif</span>
+                        <span class="spec"><i class="fas fa-check"></i> Pro</span>
+                    </div>
+                    <div class="solution-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">4.8/5 (650 avis)</span>
+                    </div>
+                    <a href="https://krita.org" target="_blank" class="btn btn-primary btn-block">
+                        <i class="fas fa-palette"></i> Créer
+                    </a>
+                </div>
+
+                <!-- Thunderbird -->
+                <div class="solution-card solution-card-office" data-filter="office">
+                    <div class="solution-badge">Email</div>
+                    <div class="solution-icon">📧</div>
+                    <h3>Thunderbird</h3>
+                    <p class="solution-tagline">Email libre et décentralisé</p>
+                    <p class="solution-description">Gestionnaire d'email avec chiffrement intégré et support POP3/IMAP.</p>
+                    <div class="solution-specs">
+                        <span class="spec"><i class="fas fa-check"></i> Sécurisé</span>
+                        <span class="spec"><i class="fas fa-check"></i> Chiffré</span>
+                        <span class="spec"><i class="fas fa-check"></i> Libre</span>
+                    </div>
+                    <div class="solution-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-text">4.4/5 (890 avis)</span>
+                    </div>
+                    <a href="https://www.thunderbird.net" target="_blank" class="btn btn-primary btn-block">
+                        <i class="fas fa-envelope"></i> Configurer
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leaderboard -->
+    <section id="leaderboard" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-badge">🏆</span>
+                Classement des résistants
+            </h2>
+            <div class="leaderboard-container">
+                <div class="leaderboard-table">
+                    <div class="leaderboard-row header">
+                        <div class="leaderboard-rank">#</div>
+                        <div class="leaderboard-name">Établissement</div>
+                        <div class="leaderboard-score">Score NIRD</div>
+                        <div class="leaderboard-badge">Statut</div>
+                    </div>
+                    <div class="leaderboard-row rank-1">
+                        <div class="leaderboard-rank">🥇</div>
+                        <div class="leaderboard-name">Lycée Carnot (Bruay)</div>
+                        <div class="leaderboard-score">980 pts</div>
+                        <div class="leaderboard-badge"><span class="badge badge-gold">Village Complet</span></div>
+                    </div>
+                    <div class="leaderboard-row rank-2">
+                        <div class="leaderboard-rank">🥈</div>
+                        <div class="leaderboard-name">Collège Victor Hugo</div>
+                        <div class="leaderboard-score">850 pts</div>
+                        <div class="leaderboard-badge"><span class="badge badge-silver">En transition</span></div>
+                    </div>
+                    <div class="leaderboard-row rank-3">
+                        <div class="leaderboard-rank">🥉</div>
+                        <div class="leaderboard-name">École du Libre</div>
+                        <div class="leaderboard-score">720 pts</div>
+                        <div class="leaderboard-badge"><span class="badge badge-bronze">En développement</span></div>
+                    </div>
+                    <div class="leaderboard-row">
+                        <div class="leaderboard-rank">4</div>
+                        <div class="leaderboard-name">Lycée Voltaire</div>
+                        <div class="leaderboard-score">650 pts</div>
+                        <div class="leaderboard-badge"><span class="badge">Débutant</span></div>
+                    </div>
+                    <div class="leaderboard-row">
+                        <div class="leaderboard-rank">5</div>
+                        <div class="leaderboard-name">Lycée République</div>
+                        <div class="leaderboard-score">580 pts</div>
+                        <div class="leaderboard-badge"><span class="badge">Débutant</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community NIRD -->
+    <section id="community" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-badge">🤝</span>
+                Rejoins la communauté NIRD
+            </h2>
+            <p class="section-subtitle">Transforme ton établissement en village numérique résistant.</p>
+
+            <div class="community-cards">
+                <div class="community-card">
+                    <div class="card-icon">🌐</div>
+                    <h3>Site officiel NIRD</h3>
+                    <p>Découvre toutes les ressources et documentations officielles.</p>
+                    <a href="https://nird.forge.apps.education.fr" target="_blank" class="btn btn-secondary btn-block">
+                        <i class="fas fa-external-link-alt"></i> Visiter
+                    </a>
+                </div>
+                <div class="community-card">
+                    <div class="card-icon">🔨</div>
+                    <h3>Forge des communs</h3>
+                    <p>Accède à la Forge des communs numériques éducatifs.</p>
+                    <a href="https://forge.apps.education.fr" target="_blank" class="btn btn-secondary btn-block">
+                        <i class="fas fa-external-link-alt"></i> Explorer
+                    </a>
+                </div>
+                <div class="community-card">
+                    <div class="card-icon">💬</div>
+                    <h3>Discussions</h3>
+                    <p>Partage idées et solutions avec d'autres établissements.</p>
+                    <a href="#feedback" class="btn btn-secondary btn-block">
+                        <i class="fas fa-comment-dots"></i> Participer
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Feedback Form -->
-    <section id="feedback" class="section">
+    <section id="feedback" class="section section-alt">
         <div class="container">
-            <h2>💬 Ton feedback</h2>
-            <p>Partage idées, remarques ou projets autour du NIRD.</p>
-            <form id="feedbackForm">
-                <div class="form-row">
-                    <input type="email" id="feedbackEmail" placeholder="Ton email (optionnel)">
-                    <input type="text" id="feedbackSchool" placeholder="Nom de ton établissement (optionnel)">
+            <h2 class="section-title">
+                <span class="title-badge">💬</span>
+                Partage ton expérience
+            </h2>
+            <p class="section-subtitle">Tes idées renforcent la communauté NIRD.</p>
+
+            <form id="feedbackForm" class="feedback-form">
+                <div class="form-group">
+                    <label for="feedbackEmail">Email</label>
+                    <input type="email" id="feedbackEmail" placeholder="ton.email@ecole.fr" required>
                 </div>
-                <textarea id="feedbackText" placeholder="Que retiens-tu du quiz ? Quelle solution libre veux-tu tester en premier ?" required></textarea>
-                <button type="submit">🚀 Envoyer à la communauté NIRD (localement)</button>
+
+                <div class="form-group">
+                    <label for="feedbackSchool">Établissement</label>
+                    <input type="text" id="feedbackSchool" placeholder="Nom de ton établissement">
+                </div>
+
+                <div class="form-group">
+                    <label for="feedbackScore">Score au quiz</label>
+                    <input type="number" id="feedbackScore" min="0" max="12" placeholder="Ex: 9">
+                </div>
+
+                <div class="form-group">
+                    <label for="feedbackText">Ton message</label>
+                    <textarea id="feedbackText" placeholder="Que retiens-tu du quiz ? Quelle solution veux-tu tester ? Des suggestions ?" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-lg btn-block">
+                    <i class="fas fa-paper-plane"></i> Envoyer ton feedback
+                </button>
             </form>
         </div>
     </section>
 
     <!-- Mur de contributions -->
-    <section id="community-wall" class="section bg-light">
+    <section id="community-wall" class="section">
         <div class="container">
-            <h2>🧱 Mur des villages résistants</h2>
-            <p class="community-text">
-                Idées d’actions proposées par les visiteurs sur ce navigateur.
-            </p>
-            <div id="contributions-list" class="solutions-grid">
-                <!-- Rempli dynamiquement par script.js -->
+            <h2 class="section-title">
+                <span class="title-badge">🧱</span>
+                Mur des villages résistants
+            </h2>
+            <p class="section-subtitle">Idées et expériences partagées par la communauté.</p>
+
+            <div id="contributions-list" class="contributions-grid">
+                <!-- Rempli par script.js -->
             </div>
-            <p style="text-align:center; margin-top:20px; font-size:0.9rem; color:#777;">
-                Les contributions sont stockées localement (localStorage) sur cet appareil.
+
+            <p style="text-align:center; margin-top:30px; font-size:0.95rem; color:#777;">
+                <i class="fas fa-info-circle"></i>
+                Les contributions sont stockées localement sur cet appareil.
             </p>
         </div>
     </section>
@@ -172,21 +593,49 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p><strong>🏘️ Village Numérique Résistant – Nuit de l’Info 2025</strong></p>
-            <p>Licence : <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> – Ressources libres de droit</p>
-            <p>
-                Code source : 
-                <a href="https://github.com/moatezslim/NIRD" target="_blank">github.com/moatezslim/NIRD</a> 
-                (licence libre)
-            </p>
-            <p>
-                Quiz officiel : 
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfu8zC9G0fAtPLsUOxRyU7VqvFc-gzyFE7wqdPhuKl3Lhy3dQ/viewform?usp=header" target="_blank">
-                    Google Forms NIRD
-                </a>
-            </p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Village NIRD</h3>
+                    <p>Une initiative pour transformer l'éducation numérique en France.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Ressources</h3>
+                    <ul>
+                        <li><a href="https://nird.forge.apps.education.fr">Site NIRD</a></li>
+                        <li><a href="https://forge.apps.education.fr">Forge</a></li>
+                        <li><a href="https://github.com/moatezslim/NIRD">GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Légal</h3>
+                    <ul>
+                        <li><a href="#">Licence CC-BY-SA 4.0</a></li>
+                        <li><a href="#">Code libre</a></li>
+                        <li><a href="#">Ressources CC0</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 <strong>Village Numérique Résistant</strong> – Nuit de l'Info</p>
+                <p>
+                    Code source : 
+                    <a href="https://github.com/moatezslim/NIRD" target="_blank">github.com/moatezslim/NIRD</a> 
+                    • Licence : <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC-BY-SA 4.0</a>
+                </p>
+            </div>
         </div>
     </footer>
+
+    <!-- Modal Success -->
+    <div id="successModal" class="modal hidden">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <div class="modal-icon">✅</div>
+            <h2>Feedback envoyé !</h2>
+            <p id="modalMessage">Merci pour ta contribution à la communauté NIRD.</p>
+            <button class="btn btn-primary" onclick="closeModal()">Fermer</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
