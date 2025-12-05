@@ -41,6 +41,48 @@ body {
     padding: 0 20px;
 }
 
+/* ==================== ANIMATIONS ==================== */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+@keyframes shimmer {
+    0% { background-position: -1000px 0; }
+    100% { background-position: 1000px 0; }
+}
+
+@keyframes bounce-in {
+    0% { transform: scale(0.9); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes rotate-village {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 /* ==================== HEADER / NAVBAR ==================== */
 .navbar {
     position: sticky;
@@ -131,48 +173,6 @@ body {
     background: var(--dark);
     border-radius: 2px;
     transition: all var(--duration) var(--ease);
-}
-
-/* ==================== ANIMATIONS ==================== */
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
-}
-
-@keyframes slideInLeft {
-    from { opacity: 0; transform: translateX(-50px); }
-    to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes slideInRight {
-    from { opacity: 0; transform: translateX(50px); }
-    to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(40px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.7; }
-}
-
-@keyframes shimmer {
-    0% { background-position: -1000px 0; }
-    100% { background-position: 1000px 0; }
-}
-
-@keyframes bounce-in {
-    0% { transform: scale(0.9); opacity: 0; }
-    50% { opacity: 1; }
-    100% { transform: scale(1); opacity: 1; }
-}
-
-@keyframes rotate-village {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
 }
 
 /* ==================== HERO SECTION ==================== */
@@ -668,15 +668,6 @@ body {
     margin: 40px 0 0 0;
 }
 
-.next-btn {
-    background: var(--success);
-    color: var(--white);
-}
-
-.next-btn:hover {
-    background: #1e7e34;
-}
-
 .hidden {
     display: none !important;
 }
@@ -947,6 +938,50 @@ body {
     color: var(--gray);
 }
 
+/* ==================== SOLUTION LINKS ==================== */
+.solution-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.solution-links .btn {
+    justify-content: center;
+    font-size: 0.95rem;
+    padding: 12px 16px;
+    border: none;
+    text-decoration: none;
+    transition: all var(--duration) var(--ease);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.solution-links .btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: var(--white);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.solution-links .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+}
+
+.solution-links .btn-secondary {
+    background: var(--light);
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    font-weight: 600;
+}
+
+.solution-links .btn-secondary:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
 /* ==================== LEADERBOARD ==================== */
 .leaderboard-container {
     background: var(--white);
@@ -1188,6 +1223,7 @@ body {
     color: var(--primary);
     text-decoration: none;
     transition: color var(--duration) var(--ease);
+    cursor: pointer;
 }
 
 .footer-section a:hover {
@@ -1349,10 +1385,6 @@ body {
 @media (max-width: 480px) {
     .hero-title {
         font-size: 2rem;
-    }
-
-    .hero-badges {
-        flex-direction: column;
     }
 
     .section-title {

@@ -92,6 +92,12 @@ function toggleMenu() {
   navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
 }
 
+// ==================== OPEN LINKS FUNCTION ====================
+function openLink(url, name) {
+  console.log(`Ouverture : ${name} - ${url}`);
+  window.open(url, '_blank', 'noopener,noreferrer');
+}
+
 // ==================== QUIZ FUNCTIONS ====================
 function setupQuiz() {
   if (startBtn) {
@@ -759,11 +765,9 @@ function gameLoop() {
   if (!canvas || !ctx) return;
   if (gameState.isPaused) return;
 
-  // Clear canvas
   ctx.fillStyle = '#1a1a2e';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  // Draw grid
   ctx.strokeStyle = 'rgba(102, 126, 234, 0.1)';
   ctx.lineWidth = 1;
   for (let i = 0; i < canvas.width; i += 50) {
@@ -779,27 +783,22 @@ function gameLoop() {
     ctx.stroke();
   }
 
-  // Update enemies
   gameState.enemies = gameState.enemies.filter(enemy => {
     if (!enemy.update()) return false;
     enemy.draw();
     return true;
   });
 
-  // Update particles
   gameState.particles = gameState.particles.filter(particle => {
     if (!particle.update()) return false;
     particle.draw();
     return true;
   });
 
-  // Draw village
   if (village) village.draw();
 
-  // Update HUD
   updateHUD();
 
-  // Check wave completion
   if (gameState.enemies.length === 0 && gameState.wave < gameState.maxWaves) {
     setTimeout(() => {
       gameState.wave++;
@@ -807,7 +806,6 @@ function gameLoop() {
     }, 1500);
   }
 
-  // Check win condition
   if (gameState.enemies.length === 0 && gameState.wave === gameState.maxWaves) {
     endGame(true);
     return;
@@ -821,8 +819,9 @@ function gameLoop() {
 // ==================== LAUNCH ====================
 document.addEventListener('DOMContentLoaded', init);
 
-console.log('🏘️ Village NIRD PRO - JOGO FIXÉ !');
-console.log('✅ Quiz gamifié');
-console.log('✅ Jeu de défense CORRIGÉ');
-console.log('✅ Solutions libres');
+console.log('🏘️ Village NIRD PRO - VERSION 3 FINALE COMPLÈTE !');
+console.log('✅ Quiz gamifié - FONCTIONNEL');
+console.log('✅ Jeu de défense - FONCTIONNEL');
+console.log('✅ Solutions libres - LIENS CORRIGÉS');
 console.log('✅ Communauté interactive');
+console.log('✅ 100% libre et responsable');
