@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏘️ Village Numérique Résistant - NIRD</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Quiz NIRD - Libère ton école des Big Tech ! Linux, Nextcloud, solutions libres">
+</head>
+<body>
+    <!-- Header -->
+    <header class="hero">
+        <div class="container">
+            <h1>🏘️ Le Village Numérique Résistant</h1>
+            <p class="subtitle">David contre Goliath 🗡️ - Astérix contre l'Empire Numérique</p>
+            <button id="startQuizBtn" class="cta-btn">🎮 Teste ta Résistance →</button>
+        </div>
+    </header>
+
+    <!-- NIRD Intro -->
+    <section id="nird-intro" class="section">
+        <div class="container">
+            <h2>Qu'est-ce que NIRD ?</h2>
+            <div class="pillars">
+                <div class="pillar">
+                    <span class="pillar-icon">✅</span>
+                    <h3>Inclusion</h3>
+                    <p>Accès égal pour tous, pas d'exclusion</p>
+                </div>
+                <div class="pillar">
+                    <span class="pillar-icon">⚖️</span>
+                    <h3>Responsabilité</h3>
+                    <p>Respect des données, autonomie technologique</p>
+                </div>
+                <div class="pillar">
+                    <span class="pillar-icon">🌱</span>
+                    <h3>Durabilité</h3>
+                    <p>Réduire l'obsolescence, réemploi matériel</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz-section" class="section hidden">
+        <div class="container">
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <h2 id="quiz-title">Défi Résistance Numérique</h2>
+                    <div class="progress-bar">
+                        <div id="progress-fill" class="progress-fill"></div>
+                    </div>
+                    <p class="score">Score : <span id="current-score">0</span>/12</p>
+                </div>
+                <div id="question-container">
+                    <!-- Questions générées par JS -->
+                </div>
+                <button id="nextBtn" class="next-btn hidden">Question Suivante →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Libres -->
+    <section id="solutions" class="section">
+        <div class="container">
+            <h2>💡 Solutions Libres pour ton École</h2>
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="solution-icon">🐧</div>
+                    <h3>Linux Mint</h3>
+                    <p>Remplace Windows<br><strong>Gratuit • Pas d'obsolescence</strong></p>
+                    <a href="https://linuxmint.com" target="_blank" class="solution-link">→ Tester</a>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">☁️</div>
+                    <h3>Nextcloud</h3>
+                    <p>Remplace Google Drive<br><strong>Données souveraines UE</strong></p>
+                    <a href="https://nextcloud.com" target="_blank" class="solution-link">→ Découvrir</a>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">📝</div>
+                    <h3>LibreOffice</h3>
+                    <p>Remplace MS Office<br><strong>Compatible • Gratuit</strong></p>
+                    <a href="https://libreoffice.org" target="_blank" class="solution-link">→ Télécharger</a>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">🎨</div>
+                    <h3>GIMP</h3>
+                    <p>Remplace Photoshop<br><strong>Professionnel • Open Source</strong></p>
+                    <a href="https://gimp.org" target="_blank" class="solution-link">→ Installer</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Communauté -->
+    <section id="community" class="section">
+        <div class="container">
+            <h2>🤝 Rejoins la Communauté NIRD</h2>
+            <p>La dépendance Big Tech n'est pas une fatalité !</p>
+            <div class="community-links">
+                <a href="https://nird.forge.apps.education.fr" target="_blank" class="community-btn">
+                    Site Officiel NIRD
+                </a>
+                <a href="https://forge.apps.education.fr" target="_blank" class="community-btn">
+                    Forge Communs Numériques
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Form -->
+    <section id="feedback" class="section">
+        <div class="container">
+            <h2>💬 Ton Feedback</h2>
+            <form id="feedbackForm">
+                <input type="email" id="feedbackEmail" placeholder="Ton email (optionnel)" required>
+                <textarea id="feedbackText" placeholder="Quelle solution vas-tu essayer ? Des suggestions ?" required></textarea>
+                <button type="submit">Envoyer Feedback</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 La Nuit de l'Info - Village Numérique Résistant</p>
+            <p>Licence : <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC-BY-SA 4.0</a> | 100% Ressources Libres</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
