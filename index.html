@@ -15,7 +15,9 @@
             <h1>🏘️ Le Village Numérique Résistant</h1>
             <p class="subtitle">David contre Goliath 🗡️ – Astérix contre l’Empire numérique</p>
             <div class="hero-buttons">
-                <button id="startQuizBtn" class="cta-btn">🎮 Lancer le quiz (4 questions)</button>
+                <button id="startQuizBtn" class="cta-btn">
+                    🎮 Teste ta Résistance →
+                </button>
                 <a href="#solutions" class="secondary-btn">💡 Voir les solutions libres</a>
             </div>
         </div>
@@ -45,42 +47,46 @@
         </div>
     </section>
 
-    <!-- Quiz : ton Google Form -->
+    <!-- Quiz Section : mini-quiz + Google Form -->
     <section id="quiz-section" class="section hidden">
         <div class="container">
             <div class="quiz-container">
-                <h2>🎮 Quiz : Le Village Numérique Résistant</h2>
-                <p class="quiz-desc">
-                    Réponds à ces 4 questions pour calculer ton score de résistance numérique.
-                </p>
+                <div class="quiz-header">
+                    <h2 id="quiz-title">Défi Résistance Numérique</h2>
+                    <div class="progress-bar">
+                        <div id="progress-fill" class="progress-fill"></div>
+                    </div>
+                    <p class="score">Score : <span id="current-score">0</span>/12</p>
+                </div>
+                <div id="question-container">
+                    <!-- Questions générées par JS -->
+                </div>
+                <button id="nextBtn" class="next-btn hidden">Question suivante →</button>
 
+                <hr style="margin: 40px 0; border: none; border-top: 1px solid #eee;">
+
+                <h3 style="text-align:center; margin-bottom:15px;">
+                    📋 Quiz officiel NIRD (Google Forms)
+                </h3>
+                <p class="quiz-desc">
+                    Réponds aussi au formulaire officiel pour enregistrer ton score et tes réponses.
+                </p>
                 <div class="form-container">
-                    <!-- IFRAME avec TON FORMULAIRE -->
                     <iframe
                         src="https://docs.google.com/forms/d/e/1FAIpQLSfu8zC9G0fAtPLsUOxRyU7VqvFc-gzyFE7wqdPhuKl3Lhy3dQ/viewform?embedded=true"
                         width="100%"
-                        height="900"
+                        height="750"
                         frameborder="0"
                         marginheight="0"
                         marginwidth="0">
-                        Chargement du quiz…
+                        Chargement du formulaire…
                     </iframe>
-                </div>
-
-                <div class="quiz-info">
-                    <p><strong>Au programme :</strong></p>
-                    <ul>
-                        <li>Windows 10 obsolète → que faire ?</li>
-                        <li>Données élèves chez Google → quel risque ?</li>
-                        <li>Remplacement des vieux PC → problème NIRD ?</li>
-                        <li>Alternative libre à Google Drive → laquelle ?</li>
-                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solutions libres -->
+    <!-- Solutions Libres -->
     <section id="solutions" class="section">
         <div class="container">
             <h2>💡 Solutions libres pour ton établissement</h2>
@@ -131,10 +137,10 @@
         </div>
     </section>
 
-    <!-- Feedback -->
+    <!-- Feedback Form -->
     <section id="feedback" class="section">
         <div class="container">
-            <h2>💬 Ton retour compte</h2>
+            <h2>💬 Ton feedback</h2>
             <p>Partage idées, remarques ou projets autour du NIRD.</p>
             <form id="feedbackForm">
                 <div class="form-row">
@@ -142,8 +148,24 @@
                     <input type="text" id="feedbackSchool" placeholder="Nom de ton établissement (optionnel)">
                 </div>
                 <textarea id="feedbackText" placeholder="Que retiens-tu du quiz ? Quelle solution libre veux-tu tester en premier ?" required></textarea>
-                <button type="submit">🚀 Envoyer à la communauté NIRD</button>
+                <button type="submit">🚀 Envoyer à la communauté NIRD (localement)</button>
             </form>
+        </div>
+    </section>
+
+    <!-- Mur de contributions -->
+    <section id="community-wall" class="section bg-light">
+        <div class="container">
+            <h2>🧱 Mur des villages résistants</h2>
+            <p class="community-text">
+                Idées d’actions proposées par les visiteurs sur ce navigateur.
+            </p>
+            <div id="contributions-list" class="solutions-grid">
+                <!-- Rempli dynamiquement par script.js -->
+            </div>
+            <p style="text-align:center; margin-top:20px; font-size:0.9rem; color:#777;">
+                Les contributions sont stockées localement (localStorage) sur cet appareil.
+            </p>
         </div>
     </section>
 
@@ -152,9 +174,15 @@
         <div class="container">
             <p><strong>🏘️ Village Numérique Résistant – Nuit de l’Info 2025</strong></p>
             <p>Licence : <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> – Ressources libres de droit</p>
-            <p>Quiz hébergé sur Google Forms :
+            <p>
+                Code source : 
+                <a href="https://github.com/moatezslim/NIRD" target="_blank">github.com/moatezslim/NIRD</a> 
+                (licence libre)
+            </p>
+            <p>
+                Quiz officiel : 
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfu8zC9G0fAtPLsUOxRyU7VqvFc-gzyFE7wqdPhuKl3Lhy3dQ/viewform?usp=header" target="_blank">
-                    Voir le formulaire
+                    Google Forms NIRD
                 </a>
             </p>
         </div>
